@@ -53,6 +53,25 @@ app.post("/api/form", async (req, res) => {
   });
 });
 
+const whitelist = [
+  "http://localhost:3001",
+  "https://evening-fortress-81192.herokuapp.com/",
+];
+
+const corsOptions = {
+  origin: function (origin, callback) {
+    console.log("** Origin of request " + origin);
+    if (whitelist.indexOf(origin) !== -1 || !origin) {
+      console.log("Origin acceptable");
+      callback(null, true);
+    } else {
+      console.log("Origin rejected");
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+};
+app.use(cors(corsOptions));
+
 const PORT = process.env.PORT || 3001;
 
 app.use(express.static(path.join(__dirname, "client/build")));
