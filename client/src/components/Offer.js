@@ -1,4 +1,5 @@
 import React from "react";
+import pdf from "./images/resume.png";
 import { Zoom, Bounce } from "react-reveal";
 
 import "./Offer.css";
@@ -18,8 +19,8 @@ const Offer = () => {
           of UI libraries: Bootstrap 4, React-Bootstrap, MaterializeCSS,
           Material-UI.
           <br />
-          <a href='pdf/info.txt' target='_blank'>
-            View Resume
+          <a href={pdf} target='_blank'>
+            <button>View Resume</button>
           </a>
         </div>
       </Bounce>
