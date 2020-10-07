@@ -26,7 +26,7 @@ const About = () => {
             to find a great company i can work for to further develop my skills
             as a developer and gain experience as i work. I am also always
             seeking to expand on my current knowledge base. Please feel free to
-            email me down below with any questions. !
+            email me down below with any questions.
           </div>
         </Bounce>
       </div>
@@ -41,7 +41,7 @@ const About = () => {
             </span>
             <span>
               <img src='https://img.icons8.com/color/96/000000/css3.png' />
-              <h3>CSS 3 /</h3>
+              <h3>CSS 3 </h3>
             </span>
             <span>
               <img src='https://img.icons8.com/color/96/000000/javascript.png' />

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useAlert } from "react-alert";
 import { Zoom, Bounce } from "react-reveal";
 
 import axios from "axios";
@@ -6,6 +7,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "./Contact.css";
 
 const Contact = () => {
+  const alert = useAlert();
   const [formdata, setFormData] = useState({
     name: "",
     email: "",
@@ -21,7 +23,8 @@ const Contact = () => {
   const onSubmit = async (e) => {
     e.preventDefault();
     if (name === "" || email === "" || message === "") {
-      return console.log("fields are empptys");
+      alert.show("Please fill out the contact fields");
+      return console.log("fields are emptys");
     }
 
     const form = await axios
@@ -30,7 +33,7 @@ const Contact = () => {
 
     if (form.status === 200) {
       setFormData({ name: "", email: "", message: "" });
-      toast.success("Email has been sent successfully");
+      alert.show("Message Sent Successfully");
     }
   };
 

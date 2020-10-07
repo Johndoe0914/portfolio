@@ -18,8 +18,8 @@ const Offer = () => {
           of UI libraries: Bootstrap 4, React-Bootstrap, MaterializeCSS,
           Material-UI.
           <br />
-          <a href='/uploads/pdf/resume.pdf'>
-            <button>View Resume</button>
+          <a href='pdf/info.txt' target='_blank'>
+            View Resume
           </a>
         </div>
       </Bounce>

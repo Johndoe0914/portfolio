@@ -115,7 +115,7 @@
 }
 
 .about__skillsIcons > span {
-  margin: 5px;
+  margin-right: 10px;
 }
 
 .about__skillsIcons > span > h3 {
@@ -124,7 +124,8 @@
 
 .about__skillsIcons > span > img {
   height: 100px;
-  width: 125px;
+  width: 114px;
+  object-fit: contain;
 }
 .about__description {
   margin-left: 50px;
